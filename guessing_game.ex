@@ -1,5 +1,5 @@
 defmodule GuessingGame do
-def guess(a, b) when a > b, do: guess(b, a) #guard checks that high is the bigger of the two numbers 
+def guess(a, b) when a > b, do: guess(b, a)
 
 def guess(low, high) do
    answer = IO.gets ("Hmm... maybe you're thinking of #{mid(low, high)}?\n")
@@ -14,10 +14,10 @@ end
 
 
 def mid(low, high) do
-    div(low + high, 2) # divide low + high by 2
+    div(low + high, 2) 
  end 
  def bigger(low, high) do
-     newLow = min(high, mid(low, high) + 1) # the min() get the min of 2 numbers 
+     newLow = min(high, mid(low, high) + 1) 
      guess(newLow, high)
  end
 def smaller(low, high) do
